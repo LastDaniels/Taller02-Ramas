@@ -35,8 +35,7 @@ public class PrimaryController {
         for (Cancion c : listaCanciones ) {
 
             HBox hb = new HBox(10);//hbox para ubicar info de cada cancion
-            Label lbp = new Label(c.getPosActual() + "");
-            lbp.setStyle("-fx-font-weight: bold;-fx-font-size: 40;");
+            
             ImageView iv = new ImageView();
             try {
                 Image img = new Image(new FileInputStream("img/" + c.getImagen()), 50, 50, true, true);
@@ -47,6 +46,8 @@ public class PrimaryController {
             }
             Label lbT = new Label(c.getTitulo() + " \n" + c.getCantante());//titulo y cantante
             lbT.setStyle("-fx-font-weight: bold;-fx-font-size: 14;");
+            Label lbp = new Label(c.getPosActual() + "");
+            lbp.setStyle("-fx-font-weight: bold;-fx-font-size: 40;");
 
             hb.getChildren().addAll(lbp, iv, lbT);//agregar al hbox
 
