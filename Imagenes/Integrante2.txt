@@ -1,0 +1,1 @@
+Como en el netbeans del laboratorio no se puede acceder a JavaFX, se manda captura de los cambios en el código 
